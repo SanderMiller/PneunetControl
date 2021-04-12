@@ -47,7 +47,7 @@ void loop() {
   error = desiredPosition - flexReading;
   
   deltaError = (error - oldError)/ deltaT;
-  integralError += error*deltaError;
+  integralError += error*deltaT;
 
   sumError = (kp*error)+(ki*integralError)+(kd*deltaError);
 
